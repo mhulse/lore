@@ -1,0 +1,257 @@
+* {
+	
+	// // I want everything `color` and `background-color` to animate:
+	// -webkit-transition: color 100ms linear, background-color 100ms linear;
+	//    -moz-transition: color 100ms linear, background-color 100ms linear;
+	//     -ms-transition: color 100ms linear, background-color 100ms linear;
+	//      -o-transition: color 100ms linear, background-color 100ms linear;
+	//         transition: color 100ms linear, background-color 100ms linear;
+	
+	&,
+	&::before,
+	&::after {
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+	}
+	
+}
+
+html,
+body {
+	overflow-x: hidden;
+	background: $raven;
+}
+
+html {
+	height: 100%;
+	overflow-y: scroll;
+	-webkit-tap-highlight-color: rgba($raven, 0);
+	position: relative;
+}
+
+body {
+	font: {
+		family: $sans;
+		size: 14px;
+		weight: 300;
+	}
+	line-height: 1.5;
+	text-align: center;
+	color: rgba($milk, .5);
+	min-height: 100%;
+	_height: 100%;
+	background: $raven url(../images/grunge.gif) center top;
+	padding: 100px 50px;
+}
+
+p {
+	font-size: 18px;
+	letter-spacing: .06em;
+	margin: 20px 0;
+}
+
+a {
+	
+	&,
+	&:visited {
+		color: $primary;
+		text-decoration: none;
+	}
+	.no-touch &:visited:hover,
+	&:focus,
+	.no-touch &:focus:hover,
+	.no-touch &:hover,
+	&:active { color: $secondary; }
+	
+}
+
+::-moz-selection {
+	background: rgba($primary, .55);
+	text-shadow: none;
+}
+
+::selection {
+	background: rgba($primary, .55);
+	text-shadow: none;
+}
+
+hr {
+	
+	border: 0 {
+		top: 4px solid rgba($milk, .25);
+	};
+	height: 0;
+	margin: {
+		top: 100px;
+		bottom: 100px;
+	}
+	padding: 0;
+	-webkit-box-sizing: content-box;
+	   -moz-box-sizing: content-box;
+	    -ms-box-sizing: content-box;
+	     -o-box-sizing: content-box;
+	        box-sizing: content-box;
+	
+	article &,
+	aside &,
+	section & {
+		border: {
+			top-width: 2px;
+			color: rgba($milk, .15);
+			style: dotted;
+		}
+		margin: {
+			top: 50px;
+			bottom: 50px;
+		}
+	}
+	
+}
+
+blockquote {
+	
+	font: {
+		size: 22px;
+		style: italic;
+		weight: 100;
+	}
+	letter-spacing: .08em;
+	word-spacing: .15em;
+	color: rgba($milk, .75);
+	margin: {
+		top: 50px;
+		bottom: 50px;
+	}
+	padding: 0;
+	position: relative;
+	
+	p {
+		font: {
+			family: inherit;
+			size: inherit;
+			weight: inherit;
+		}
+		line-height: inherit;
+		letter-spacing: inherit;
+		margin: 10px 0;
+	}
+	
+	footer {
+		
+		font: {
+			weight: 100;
+			size: 70%;
+			weight: 400;
+			style: normal;
+		}
+		letter-spacing: .1em;
+		
+		p { margin: 0; }
+		
+	}
+	
+	* { max-width: none; }
+	
+	> :first-child { margin-top: 0 !important; }
+	> :last-child { margin-bottom: 0 !important; }
+	
+	&::before,
+	&::after {
+		@include font-awesome;
+		font-size: 75px;
+		color: rgba($milk, .1);
+		line-height: 1;
+		position: absolute;
+	}
+	
+	&::before {
+		top: -25px;
+		left: -40px;
+		content: "\f10d";
+	}
+	
+	&::after {
+		bottom: -25px;
+		right: -30px;
+		content: "\f10e";
+	}
+	
+}
+
+mark {
+	color: rgba($duck, .75);
+	background: rgba($duck, .25);
+	padding: 1px 3px;
+	border-radius: 3px;
+}
+
+del,
+ins {
+	line-height: 0;
+	letter-spacing: .05em;
+	padding: 1px 3px;
+	position: relative;
+	border-radius: 2px;
+}
+del {
+	color: rgba($chili, .75);
+	background: rgba($chili, .25);
+}
+ins {
+	
+	color: rgba($frog, .75);
+	background: rgba($frog, .25);
+	text-decoration: none;
+	
+	&::before { content: "["; }
+	&::after { content: "]"; }
+	
+}
+
+q {
+	font-weight: bolder;
+	font-style: italic;
+}
+
+abbr {
+	
+	font-style: italic;
+	cursor: help;
+	
+	&[title] { border-bottom: 2px solid; }
+	
+}
+
+cite { font-style: italic; }
+
+dfn {
+	
+	font-weight: bold;
+	font-style: italic;
+	
+	&[title] {
+		border-bottom: 2px solid;
+		cursor: help;
+	}
+	
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+
+wbr {
+	
+	&::after { content: "\00200B"; }
+	
+}
+
+small,
+.small { font-size: smaller; }

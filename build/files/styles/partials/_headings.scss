@@ -1,0 +1,73 @@
+h1, h2, h3, h4, h5, h6 {
+	
+	font: {
+		family: $sans;
+		weight: 300;
+	}
+	line-height: 1.25;
+	word: {
+		spacing: .12em;
+		wrap: break-word;
+	}
+	color: rgba($milk, .75);
+	overflow-wrap: break-word;
+	margin: {
+		top: 25px;
+		bottom: 25px;
+	}
+	padding: 0;
+	
+	& + & {
+		margin-top: -20px;
+	}
+	
+}
+
+.sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
+	font: {
+		style: italic;
+		weight: 100;
+	}
+}
+
+.sh4, .sh5, .sh6 { color: rgba($milk, .45); }
+
+h1, .h1, .sh1 {
+	font-size: 30px;
+	letter-spacing: .025em;
+}
+
+h2, .h2, .sh2 {
+	font-size: 28px;
+	letter-spacing: .03em
+}
+
+h3, .h3, .sh3 {
+	font-size: 26px;
+	letter-spacing: .035em;
+}
+
+h4, .h4, .sh4 {
+	font-size: 22px;
+	letter-spacing: .04em;
+}
+
+h5, .h5, .sh5 {
+	font-size: 20px;
+	letter-spacing: .045em;
+}
+
+h6, .h6, .sh6 {
+	font-size: 18px;
+	letter-spacing: .05em;
+}
+
+h1:empty { display: none; }
+
+header,
+hgroup {
+	
+	> :first-child { margin-top: 0 !important; }
+	> :last-child { margin-bottom: 0 !important; }
+	
+}

@@ -1,0 +1,46 @@
+/**
+ * Lore
+ * The reign of biological life forms is coming to an end.
+ *
+ * @author Micky Hulse
+ * @link http://mky.io
+ * @docs https://github.com/mhulse/lore
+ * @copyright Copyright (c) 2014 Micky Hulse.
+ * @license Released under the Apache License, Version 2.0.
+ * @version 0.1.0
+ * @date 2014/11/29
+ */
+
+
+.swatches {
+  color: #000;
+  max-width: 650px;
+  margin: 25px auto;
+}
+.swatches .swatches-swatch {
+  font-size: 14px;
+  line-height: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 5px 0;
+  padding: 10px;
+}
+.swatches .primary {
+  background: #f06;
+}
+.swatches .secondary {
+  background: #07e7f7;
+}
+
+.marker {
+  font-size: 24px;
+  font-weight: 100;
+  letter-spacing: .05em;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 0;
+}
+.marker a {
+  padding: 20px 25px;
+  background: rgba(255, 0, 102, 0.1);
+  display: inline-block;
+}

@@ -1,0 +1,38 @@
+#flag {
+	
+	font-family: "hulse", $sans;
+	font-size: 75px;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 75px;
+	text-transform: none;
+	margin: {
+		top: 0;
+		bottom: 0;
+	}
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: rgba($raven, 0);
+	-webkit-tap-highlight-color: transparent;
+	
+	// Hide the extra characters:
+	span {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
+	
+	a {
+		
+		display: inline-block;
+		
+		&:active,
+		&:focus { outline: 0; }
+		
+	}
+	
+}

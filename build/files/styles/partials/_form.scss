@@ -1,0 +1,123 @@
+.form {
+	
+	font-family: arial, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0;
+	
+	fieldset {
+		
+		border: 0;
+		margin: {
+			top: 25px;
+			bottom: 25px;
+		}
+		padding: 1px 0 0; // Prevents margin collapse.
+		
+		legend {
+			
+			margin: 0;
+			padding-bottom: 20px;
+			
+			&:empty { display: none; }
+			
+		}
+		
+	}
+	
+	label {
+		letter-spacing: .05em;
+		vertical-align: middle;
+		padding: 5px;
+	}
+	
+	%fields {
+		
+		vertical-align: baseline;
+		padding: 10px;
+		letter-spacing: .05em;
+		text-align: left;
+		border: 0 {
+			bottom: 2px solid rgba($milk, .25);
+			radius: 3px 3px 0 0;
+		}
+		background: rgba($milk, .1);
+		width: 100%;
+		display: block;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		-webkit-appearance: none;
+		   -moz-appearance: none;
+		        appearance: none;
+		-webkit-transition: .3s linear border;
+		        transition: .3s linear border;
+		-webkit-background-clip: padding;
+		   -moz-background-clip: padding;
+				background-clip: padding-box;
+		
+		&::-webkit-input-placeholder { text-align: left; }
+		&:-moz-placeholder { text-align: left; }
+		&::-moz-placeholder { text-align: left; }
+		&:-ms-input-placeholder { text-align: left; }
+		
+		&:focus,
+		&:active { outline: 0; }
+		
+		&:focus {
+			color: rgba($milk, .75);
+			border-color: $primary;
+		}
+		
+		&[disabled] {
+			color: rgba($milk, .5);
+			cursor: not-allowed;
+			border: 0;
+			border-radius: 3px;
+		}
+		
+		&[readonly] {
+			color: rgba($milk, .5);
+			border: 0;
+			border-radius: 3px;
+		}
+		
+	}
+	
+	input {
+		
+		&[type="text"],
+		&[type="password"] { @extend %fields; }
+		
+	}
+	
+	textarea {
+		@extend %fields;
+		min-height: 200px;
+		resize: vertical; // [ none | horizontal | vertical | both ]
+		overflow: auto;
+		margin: 0;
+		padding: 5px 10px;
+		vertical-align: top;
+	}
+	
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"] { @extend .button; }
+	
+	input[type="checkbox"],
+	input[type="radio"] {
+		padding: 0;
+		vertical-align: middle;
+		bottom: 2px;
+		position: relative;
+	}
+	
+	select {
+		font-size: 16px;
+		vertical-align: baseline;
+		width: 100%;
+	}
+	
+}

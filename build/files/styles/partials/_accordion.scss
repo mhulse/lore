@@ -1,0 +1,80 @@
+#accordion {
+	
+	> h3 {
+		
+		font: {
+			size: 30px;
+			weight: 300;
+		}
+		line-height: 65px; // Eyeballed this.
+		letter-spacing: .05em;
+		color: $primary;
+		width: auto;
+		max-width: none;
+		margin: {
+			top: 0;
+			bottom: 20px;
+		}
+		display: table; // Forces width to that of children.
+		cursor: pointer;
+		cursor: hand;
+		
+		> span {
+			
+			// https://github.com/mhulse/data/issues/18
+			padding: 10px;
+			background: rgba($primary, .2);
+			-webkit-box-decoration-break: clone;
+			   -moz-box-decoration-break: clone;
+			    -ms-box-decoration-break: clone;
+			     -o-box-decoration-break: clone;
+			        box-decoration-break: clone;
+			
+			> span { position: relative; } // This fixes overlap if no `mix-blend-mode`.
+			
+		}
+		
+		&.ui-state-hover,
+		&.ui-state-active {
+			
+			color: $secondary;
+			
+			> span { background: rgba($secondary, .2); }
+			
+		}
+		
+		// Removes annoying Webkit outline:
+		&:active,
+		&:focus { outline: 0; }
+		
+	}
+	
+}
+
+.progress {
+	width: 50px;
+	height: 50px;
+	background: url(../images/loader.gif) no-repeat;
+	background-size: 50px 50px;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -25px;
+	opacity: .25;
+}
+
+.ui-accordion-content {
+	
+	position: relative;
+	min-height: 50px;
+	margin-bottom: 30px; // Same margin as above h3 + 10px for better spacing.
+	
+	.js & { display: none; } // Hides accordion panels.
+	
+}
+
+.ajax-content {
+	display: none;
+	margin-top: -20px; // Overlap h3 margin.
+}

@@ -1,0 +1,47 @@
+// Helpers:
+@import "partials/variable";
+
+// `:xxx` = pseudo-class & `::xxx` = pseudo-element.
+//
+// @see http://reference.sitepoint.com/css/pseudoclasses
+// @see http://reference.sitepoint.com/css/pseudoelements
+
+.swatches {
+	
+	color: $raven;
+	max-width: 650px;
+	margin: 25px auto;
+	
+	.swatches-swatch {
+		font-size: 14px;
+		line-height: 18px;
+		border: 1px solid rgba($raven, .1);
+		margin: 5px 0;
+		padding: 10px;
+	}
+	
+	.primary { background: $primary; }
+	.secondary { background: $secondary; }
+	
+}
+
+.marker {
+	
+	font-size: 24px;
+	font-weight: 100;
+	letter-spacing: .05em;
+	margin: {
+		top: 50px;
+		bottom: 50px;
+	}
+	padding: 0;
+	
+	a {
+		
+		padding: 20px 25px;
+		background: rgba($primary, .1);
+		display: inline-block;
+		
+	}
+	
+}

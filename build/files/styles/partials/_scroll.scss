@@ -1,0 +1,56 @@
+
+// @see https://github.com/noraesae/perfect-scrollbar
+
+.scroll {
+	
+	width: 100%;
+	margin: 25px auto;
+	position: relative;
+	overflow: hidden;
+	//-webkit-overflow-scrolling: touch;
+	
+	img:first-of-type {
+		max-width: none;
+		//display: block;
+	}
+	
+	> *,
+	img:first-of-type {
+		margin-top: 0;
+		margin-bottom: 0;
+		//-webkit-transform: translateZ(0);
+	}
+	
+	figure & {
+		margin: {
+			top: 0;
+			bottom: 0;
+		}
+	}
+	
+}
+
+
+.ps-container {
+	
+	.ps-scrollbar-x-rail {
+		height: 6px;
+		background-color: rgba($raven, .5);
+		position: absolute;
+		top: 0;
+		visibility: hidden;
+	}
+	
+	&.ps-active-x .ps-scrollbar-x-rail { visibility: visible; }
+	
+	.ps-scrollbar-x {
+		background-color: rgba($primary, .9);
+		height: 6px;
+		position: absolute;
+		bottom: 0;
+		cursor: pointer;
+	}
+	
+	.ps-scrollbar-y-rail { display: none !important; } // We never want the Y rail to show.
+	
+}

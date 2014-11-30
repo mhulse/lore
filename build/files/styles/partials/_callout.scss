@@ -1,0 +1,29 @@
+.callout {
+	
+	margin: {
+		top: 25px;
+		bottom: 25px;
+	}
+	
+	&.callout-box {
+		
+		background-color: rgba($milk, .1);
+		padding: 25px;
+		border-radius: 6px;
+		
+		&.callout-info { background-color: rgba(darken($ice, 60%), .25); }
+		&.callout-success { background-color: rgba(darken($frog, 60%), .25); }
+		&.callout-warning { background-color: rgba(darken($duck, 60%), .25); }
+		&.callout-error { background-color: rgba(darken($chili, 60%), .25); }
+		
+	}
+	
+	&.callout-info { color: rgba($ice, .75); }
+	
+	&.callout-success { color: rgba($ice, .75); }
+	
+	&.callout-warning { color: rgba($duck, .75); }
+	
+	&.callout-error { color: rgba($chili, .75); }
+	
+}

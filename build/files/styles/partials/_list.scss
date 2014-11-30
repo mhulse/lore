@@ -1,0 +1,73 @@
+ul, ol, dl { padding: 0; }
+
+ul, ol { list-style: none; }
+
+dl, ol, ul {
+	margin: {
+		top: 25px;
+		bottom: 25px;
+	}
+}
+
+dl {
+	
+	dt {
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: .05em;
+		word-spacing: .15em;
+		color: rgba($milk, .75);
+		margin: 20px 0 10px;
+	}
+	
+	dd { margin: 0 0 10px; }
+	
+	> :first-child { margin-top: 0 !important; }
+	> :last-child { margin-bottom: 0 !important; }
+	
+}
+
+// http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/
+// http://css-tricks.com/numbering-in-style/
+ol,
+ul {
+	
+	counter-reset: li;
+	
+	li {
+		
+		&::before {
+			font: {
+				size: 20px;
+				weight: 700;
+			}
+			line-height: .75;
+			color: rgba($milk, .75);
+			margin: {
+				top: 15px;
+				bottom: 4px;
+			}
+			display: block;
+			content: counter(li, decimal-leading-zero);
+			counter-increment: li;
+		}
+		
+		&:first-child::before { margin-top: 0; }
+		
+	}
+	
+}
+
+ul {
+	
+	li {
+		
+		&::before {
+			font-size: 40px;
+			content: counter(li, circle);
+			margin-bottom: 2px;
+		}
+		
+	}
+	
+}

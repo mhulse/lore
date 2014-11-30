@@ -1,0 +1,60 @@
+button,
+.button { @extend .x1; }
+
+blockquote,
+label { @extend .x3; }
+
+ol,
+ul { @extend .x4; }
+
+figcaption { @extend .x5; }
+
+address,
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre { @extend .x6; }
+
+hr,
+.hr {
+	
+	@extend .x8;
+	
+	aside &,
+	section & { @extend .x7; }
+	
+	section article & { @extend .x2; }
+	
+}
+
+.x1, .x2, .x3, .x4, .x5, .x6, .x7, .x8 {
+	margin: {
+		right: auto;
+		left: auto;
+	}
+	display: block;
+	width: 100%;
+}
+
+.x1 { max-width: 150px; }
+.x2 { max-width: 250px; }
+.x3 { max-width: 350px; }
+.x4 { max-width: 450px; }
+.x5 { max-width: 550px; }
+.x6 { max-width: 650px; }
+.x7 { max-width: 750px; }
+.x8 { max-width: 800px; }
+
+// section,
+// article,
+// aside {
+// 	> :first-child { margin-top: 0 !important; }
+// 	> :last-child { margin-bottom: 0 !important; }
+// }
+
+header[role="banner"] { margin-bottom: 100px; }

@@ -1,0 +1,31 @@
+	</section>
+	
+</main>
+
+<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+
+<script src="./scripts/fastclick.js"></script>
+<script src="./scripts/jquery.js"></script>
+<script src="./scripts/jquery-ui.js"></script>
+<script src="./scripts/jquery-ui.widget.js"></script>
+<script src="./scripts/jquery-ui.accordion.js"></script>
+<script src="./scripts/jquery.perfect-scrollbar.js"></script>
+<script src="./scripts/imagesloaded.pkgd.js"></script>
+<script src="./scripts/<!-- @echo name -->.js"></script>
+<script src="./scripts/<!-- @echo name -->.mod.accordion.js"></script>
+<script src="./scripts/<!-- @echo name -->.mod.fastclick.js"></script>
+<script src="./scripts/<!-- @echo name -->.mod.scroll.js"></script>
+<script src="./scripts/<!-- @echo name -->.mod.twitter.js"></script>
+<script src="./scripts/<!-- @echo name -->.init.js"></script>
+<script src="./scripts/pending.js"></script>
+
+<!-- @endif -->
+
+<!-- @if NODE_ENV == 'PRODUCTION' -->
+
+<script src="<!-- @echo production -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/scripts/<!-- @echo name -->.min.js"></script>
+
+<!-- @endif -->
+
+</body>
+</html>

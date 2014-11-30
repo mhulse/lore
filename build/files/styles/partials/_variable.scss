@@ -1,0 +1,55 @@
+// Gray:
+$milk: #fff;
+$graye: #eee;
+$grayd: #ddd;
+$grayc: #ccc;
+$grayb: #bbb;
+$graya: #aaa;
+$gray9: #999;
+$gray8: #888;
+$gray7: #777;
+$gray6: #666;
+$gray5: #555;
+$gray4: #444;
+$gray3: #333;
+$gray2: #222;
+$gray1: #111;
+$raven: #000;
+
+$lipstick: #f06;
+$vegas: #07e7f7;
+
+// Scheme:
+$primary: $lipstick;
+$secondary: $vegas;
+
+// Boxes:
+$chili: #ffbaba;
+$duck: #feefb3;
+$frog: #dff2bf;
+$ice: #bde5f8;
+
+// Roboto:
+//     Thin 100
+//     Thin 100 Italic
+//     Light 300
+//     Light 300 Italic
+//     Normal 400
+//     Normal 400 Italic
+//     Medium 500
+//     Medium 500 Italic
+//     Bold 700
+//     Bold 700 Italic
+//     Ultra-Bold 900
+//     Ultra-Bold 900 Italic
+// Droid Sans Mono:
+//     Normal 400
+
+$sans: Roboto, Arial, sans-serif;
+$mono: "Droid Sans Mono", monospace, serif;
+
+// RULES:
+// 1. Remove line heights (let `body` take care of that).
+// 1. Use $milk for grays; use `body` gray or .75 rgba for headings.
+// 1. Margin of 25px or 50px.
+// 1. Border radius always 6px.
